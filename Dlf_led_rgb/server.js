@@ -39,26 +39,27 @@ board.on("exit", function() {
 });
  
  //Socket connection handler
-io.on('connection', function (socket) {  
-        console.log("Socket : "+ socket.id);
+io.on('connection', function (socket) {
+    socket.emit('news', { message: "Connection établie !" });  
+    console.log("Socket : "+ socket.id);
         
-        //Allumage de la led
-        socket.on('led:on', function (data) {
-           led.on();
-           console.log('LED ON RECEIVED');
-        });
+    //Allumage de la led
+    socket.on('led:on', function (data) {
+        led.on();
+        console.log('LED ON RECEIVED');
+    });
         
-        //Eteignement de la led
-        socket.on('led:off', function (data) {
-            led.off();
-            console.log('LED OFF RECEIVED');
-        });
+    //Eteignement de la led
+    socket.on('led:off', function (data) {
+        led.off();
+        console.log('LED OFF RECEIVED');
+    });
 
-        //Réglage de la couleur de la led
-        socket.on('led:color', function (data) {
-            led.color(data.color);
-            console.log('LED COLOR RECEIVED : '+ data.color);
-        });
+    //Réglage de la couleur de la led
+    socket.on('led:color', function (data) {
+        led.color(data.color);
+        console.log('LED COLOR RECEIVED : '+ data.color);
+    });
 });
 
 //Message d'attente 
