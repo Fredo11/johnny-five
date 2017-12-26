@@ -40,21 +40,22 @@ board.on("exit", function() {
  
 //Socket connection handler
 io.on('connection', function (socket) {  
-        console.log("socket : " + socket.id);
+    socket.emit('news', { message: "Connection établie !" });
+    console.log("socket : " + socket.id);
         
-        //Allumage de la led
-        socket.on('led:on', function (data) {
-           led.on();
-           console.log('LED ON RECEIVED');
-        });
- 
-        //Éteignement de la led
-        socket.on('led:off', function (data) {
-            led.off();
-            console.log('LED OFF RECEIVED');
- 
-        });
+    //Allumage de la led
+    socket.on('led:on', function (data) {
+        led.on();
+        console.log('LED ON RECEIVED');
     });
+ 
+    //Éteignement de la led
+    socket.on('led:off', function (data) {
+        led.off();
+        console.log('LED OFF RECEIVED');
+ 
+    });
+});
 
 //Message d'attente 
 console.log('Waiting for connection');
