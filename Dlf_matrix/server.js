@@ -55,7 +55,8 @@ function afficherSymbole(c){
 
  
 //Socket connection handler
-io.on('connection', function (socket) {  
+io.on('connection', function (socket) { 
+    socket.emit('news', { message: "Connection établie !" }); 
     console.log("socket : " + socket.id);
 
     //Lorsqu'on reçoint une chaine à afficher
