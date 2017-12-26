@@ -1,5 +1,5 @@
-# johnny-five
+# Johnny-five
 
-Comment débuter avec Johnny-five
+Comment débuter avec Johnny-five. 
 
-https://github.com/dlefur/johnny-five/wiki
+Pour tout savoir, lire le wiki suivant : https://github.com/dlefur/johnny-five/wiki .
