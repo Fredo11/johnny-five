@@ -54,7 +54,8 @@ board.on("exit", function() {
 
  
 //Socket connection handler
-io.on('connection', function (socket) {  
+io.on('connection', function (socket) { 
+    socket.emit('news', { message: "Connection établie !" }); 
     console.log("socket : " + socket.id);
 
     //Demande d'affichage d'un message
