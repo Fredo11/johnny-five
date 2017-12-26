@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Contrôle d'une led</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+</head>
+<body id="conteneur">
+	<header>
+		<h1>
+			Contrôle d'une led
+		</h1>
+	</header>
+
+
+	<main id="centrepage">
+		<p>
+			Branchement de la Led : D2.
+		</p>
+		<form>
+			<fieldset>
+				<legend>
+					Allumer / Éteindre
+				</legend>
+
+				<button id="boutonOn" type="button">Allumer</button>
+				<button id="boutonOff" type="button">Éteindre</button>
+				
+			</fieldset>
+		</form>
+		
+	</main>
+
+	<footer id="basdepage">
+		<p id="texteFooter">
+			Denis Le Fur
+		</p>
+	</footer>
+<script src="code.js" type="text/javascript"></script>
+</body>
+</html>

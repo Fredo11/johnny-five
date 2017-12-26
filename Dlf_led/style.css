@@ -1,0 +1,47 @@
+footer, header, fieldset {
+	background-color: #E9DADA;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height : 100vh; /* pour utiliser toute la hauteur */
+}
+
+header {
+	border-style: groove;
+	border-color: #941010;
+	padding : 10px;
+	margin-bottom: 30px;	
+}
+
+main {
+	flex :1;   /* pour que la partie centrale prenne toute la place */
+}
+
+footer {
+	text-align: right;
+	border-top : solid;
+	border-color: #941010;
+	margin-top: 30px;
+	padding : 0px;
+}
+
+
+
+
+fieldset {
+	margin-bottom:  : 30px;
+}
+
+#boutonOn {
+	background-color: green ;
+}
+
+#boutonOff {
+	background-color: red ;
+}
+
+#texteFooter {
+	margin-right: 20px;
+}
