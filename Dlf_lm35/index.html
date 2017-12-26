@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mesures de températures avec le capteur LM35</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+</head>
+<body id="conteneur">
+	<header>
+		<h1>
+			Mesures de températures avec le capteur LM35
+		</h1>
+	</header>
+
+
+	<main id="centrepage">
+		<p>
+			Branchement du capteur LM : A0.
+		</p>
+		<p>
+			Mesure toutes les 5 secondes.
+		</p>
+		<p>
+			<a href="http://johnny-five.io/examples/temperature-lm35/" target="_blank">Johnny-Five : Thermometer - LM35</a>
+		</p>
+		<br>
+
+		<ul>
+			<li>
+				<p>Température en Celsius : </p>
+				<p id="tempCelsius"></p>
+			</li>
+			<li>
+				<p>Température en Farenheit : </p>
+				<p id="tempFarenheit"></p>				
+			</li>
+
+			<li>
+				<p>Température en Kelvin : </p>
+				<p id="tempKelvin"></p>				
+			</li>
+		</ul>
+
+	</main>
+
+	<footer id="basdepage">
+		<p id="texteFooter">
+			Denis Le Fur
+		</p>
+	</footer>
+<script src="code.js" type="text/javascript"></script>
+</body>
+</html>

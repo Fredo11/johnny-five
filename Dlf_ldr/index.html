@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Niveau de luminosité avec un capteur LDR</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+</head>
+<body id="conteneur">
+	<header>
+		<h1>
+			Niveau de luminosité avec un capteur LDR
+		</h1>
+	</header>
+
+
+	<main id="centrepage">
+		<p>
+			Branchement du capteur LDR : A0. Mettre une résistance de 2k sur le 5V. L'autre patte est reliée à la masse.
+		</p>
+		<p>
+			Mesure toutes les secondes.
+		</p>
+		<p>
+			<a href="http://johnny-five.io/api/light/" target="_blank">Johnny-Five : Light</a>
+		</p>
+		<br>
+
+		<ul>
+			<li>
+				<p>Niveau de luminosité : </p>
+				<p id="niveauLumiere"></p>
+			</li>
+
+		</ul>
+
+	</main>
+
+	<footer id="basdepage">
+		<p id="texteFooter">
+			Denis Le Fur
+		</p>
+	</footer>
+<script src="code.js" type="text/javascript"></script>
+</body>
+</html>

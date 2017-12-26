@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Contrôle d'une led RGB</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+</head>
+<body id="conteneur">
+	<header>
+		<h1>
+			Contrôle d'une led RGB
+		</h1>
+	</header>
+
+
+	<main id="centrepage">
+		<p>
+			Branchement avec résistances : R(D5), G(D6) et B(D9). Utiliser uniquement les pattes PWM !
+		</p>
+		<p>
+			<a href="http://johnny-five.io/api/led.rgb/" target="_blank">Johnny-five : Led.RGB</a>
+		</p>
+		<form>
+			<fieldset>
+				<legend>
+					Allumer / Éteindre
+				</legend>
+
+				<button id="boutonOn" type="button">Allumer</button>
+				<button id="boutonOff" type="button">Éteindre</button>
+				<br>
+				<label for="inputCouleur"> Couleur de la led RGB :</label>
+				<input id="inputCouleur" type="color" name="inputCouleur" value="#00FF00">
+				<br>
+				<select id="selectCouleur">
+					<!-- rempli dynamiquement par le script js -->
+				</select>
+			</fieldset>
+		</form>
+		
+	</main>
+
+	<footer id="basdepage">
+		<p id="texteFooter">
+			Denis Le Fur
+		</p>
+	</footer>
+<script src="code.js" type="text/javascript"></script>
+</body>
+</html>
