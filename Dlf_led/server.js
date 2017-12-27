@@ -25,7 +25,7 @@ var led;
 
  var board = new five.Board(); 
 
-//A la comnnection d'Arduino 
+//A la connexion d'Arduino 
 board.on("ready", function() {  
     console.log('Arduino connected');
     led = new five.Led(2); // une led branchée sur D2
